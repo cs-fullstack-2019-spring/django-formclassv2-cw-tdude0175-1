@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>boop</title>
+</head>
+<body>
+<!--this if the form that links back to the same route from [employApp/urls.py] using the [name] of the path-->
+<h1>Employee Application</h1>
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <!--without this token IT IS FORBIDDEN!!!!-->
+    {{form}}
+
+    <button>Submit</button>
+</form>
+<!--this block is used for posting the information of person appllying-->
+{% block content %}
+
+{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'employApp/index.html' %}
+
+<!--you could add any other blocks and edit them for style-->
+{% block content %}
+<!--you don't need to run it through a for loop because there is only one employee-->
+<h3>Welcome {{employee.name}}</h3>
+<p> Date of Birth: {{employee.dateOfBirth}}</p>
+<p>Applied Position: {{employee.position}}</p>
+<p>Requested Salary: {{employee.salary}}</p>
+{% endblock content %}
